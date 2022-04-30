@@ -25,7 +25,7 @@ def parse_teamspeak3(info):
     parsed = {u'VirtualServer': {}}
     for line in info:
         if line[0][:-1] == "VirtualServer":
-            data = {u'port': int(line[1][1:]),
+            data = {u'port': line[1][1:],
                     u'status': line[2],
                     u'clientsonline': int(line[3]),
                     u'clientsmax': int(line[4]),
@@ -74,8 +74,8 @@ def check_teamspeak3(item, params, parsed):
             text += '(!)'
             state = max(state, 1)
         now = time.time()
-        in_rate = get_rate('teamspeak3.%d.if_in_octets' % item, now, vs[u'ingress'])
-        out_rate = get_rate('teamspeak3.%d.if_out_octets' % item, now, vs[u'egress'])
+        in_rate = get_rate('teamspeak3.%d.if_in_octets' % int(item), now, vs[u'ingress'])
+        out_rate = get_rate('teamspeak3.%d.if_out_octets' % int(item), now, vs[u'egress'])
         perfdata = [(u'current_users', vs[u'clientsonline'], None, None, 0, vs[u'clientsmax']),
                     (u'channels', vs[u'channels']),
                     (u'if_in_octets', in_rate),
