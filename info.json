@@ -1,0 +1,20 @@
+{
+    "author": "Bastian Venz, Marco Steiger",
+    "description": "This is an agent plugin + check plugin for Teamspeak3\n\nIt was derived from https://github.com/thannaske/cmk-teamspeak\n",
+    "download_url": "https://github.com/Marco98/cmk-teamspeak",
+    "files": {
+        "agents": [
+            "plugins/Teamspeak3"
+        ],
+        "checks": [
+            "Teamspeak3"
+        ]
+    },
+    "name": "teamspeak3",
+    "num_files": 2,
+    "title": "Teamspeak3",
+    "version": "0.3.0",
+    "version.min_required": "2.0.0",
+    "version.packaged": "2.0.0",
+    "version.usable_until": null
+}
