@@ -9,8 +9,8 @@ Check_MK agent check for Teamspeak3 virtual server instances
 ```shell
 omd su SITE
 cd /tmp
-wget https://github.com/Marco98/cmk-teamspeak/releases/download/v0.3.0/teamspeak-v0.3.0.mkp
-mkp install teamspeak-v0.3.0.mkp
+wget https://github.com/Marco98/cmk-teamspeak/releases/download/v0.3.1/teamspeak-v0.3.1.mkp
+mkp install teamspeak-v0.3.1.mkp
 ```
 
 ### Host with checkmk agent
@@ -26,6 +26,6 @@ password = pass
 
 ```shell
 cd /usr/lib/check_mk_agent/local
-wget https://github.com/Marco98/cmk-teamspeak/releases/download/v0.3.0/Teamspeak3
+wget https://github.com/Marco98/cmk-teamspeak/releases/download/v0.3.1/Teamspeak3
 chmod +x Teamspeak3
 ```
